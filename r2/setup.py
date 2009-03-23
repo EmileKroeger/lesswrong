@@ -1,3 +1,7 @@
+#hack by Emile :P
+import sys
+sys.path.append('/opt/local/lib/python2.5/site-packages')
+
 #!/usr/bin/env python
 
 # The contents of this file are subject to the Common Public Attribution

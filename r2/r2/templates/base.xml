@@ -46,6 +46,10 @@
 </rss>  
 
 <%def name="Title()">
-  ${c.site.name}: ${_("What's new")}
+  %if thing.title:
+      ${c.site.name}: ${thing.title}
+  %else:
+      ${c.site.name}: ${_("What's new?")}
+  %endif
 </%def>
 

@@ -24,7 +24,8 @@ from r2.lib import promote
 
 import random
 
-def populate(sr_name = 'reddit.com', sr_title = "reddit.com: what's new online",
+# Emile changed reddit.com to lesswrong.com
+def populate(sr_name = 'lesswrong.com', sr_title = "lesswrong.com: what's new online",
              num = 100):
     sr = Subreddit._new(name= sr_name, title = sr_title)
     sr._commit()
@@ -51,7 +52,9 @@ def create_links(num):
         title = url = 'http://google.com/?q=' + str(id)
         user = random.choice(accounts)
         sr = random.choice(subreddits)
-        l = Link._submit(title, url, user, sr, '127.0.0.1')
+        # added by emile
+        tags = []
+        l = Link._submit(title, url, user, sr, '127.0.0.1', tags)
 
         if random.choice(([False] * 50) + [True]):
             promote.promote(l)

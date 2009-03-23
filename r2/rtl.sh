@@ -31,4 +31,4 @@ fi;
 
 $sed -e "s/left/>####</g" -e "s/right/left/g" -e "s/>####</right/g" \
     -e "s/\(margin\|padding\):\s*\([^; ]\+\)\s\+\([^; ]\+\)\s\+\([^; ]\+\)\s\+\([^; ]\+\)/\1: \2 \5 \4 \3/g" \
-    r2/public/static/reddit.css > r2/public/static/reddit_rtl.css
+    r2/public/static/lesswrong.css > r2/public/static/reddit_rtl.css

@@ -136,8 +136,9 @@ class Reddit(Wrapped):
         ps.append(RecentComments())
         ps.append(RecentArticles())
 
-        for feed_url in g.feedbox_urls:
-            ps.append(FeedBox(feed_url))
+        # commented out by Emile (not present in globals)
+        #for feed_url in g.feedbox_urls:
+        #    ps.append(FeedBox(feed_url))
 
         ps.append(TagCloud())
         ps.append(TopContributors())
