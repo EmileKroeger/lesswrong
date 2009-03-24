@@ -111,7 +111,6 @@ class ListingController(RedditController):
         self.builder_obj = self.builder()
         self.listing_obj = self.listing()
         content = self.content()
-        #c.emiles_title = "TITLE " + self.title()
         res =  self.render_cls(content = content,
                                show_sidebar = self.show_sidebar, 
                                nav_menus = self.menus, 
